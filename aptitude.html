@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aptitude – Practice & Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Aptitude Preparation</h1>
+
+<!-- MODE SWITCH -->
+<div style="text-align:center;margin-bottom:20px;">
+  <button onclick="showPractice()">📘 Practice Mode</button>
+  <button onclick="showTest()">📝 Mock Test</button>
+</div>
+
+<!-- ================= PRACTICE MODE ================= -->
+<div id="practice">
+
+<h2>Practice Mode (Learn with Answers)</h2>
+
+<div class="question">
+  <p><b>Q1.</b> A train covers 120 km in 2 hours. Speed?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">
+    <p><b>Answer:</b> 60 km/hr</p>
+    <p><b>Explanation:</b> Speed = Distance / Time = 120 / 2</p>
+  </div>
+</div>
+
+<div class="question">
+  <p><b>Q2.</b> 20% of 250?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">
+    <p><b>Answer:</b> 50</p>
+    <p><b>Explanation:</b> (20/100) × 250</p>
+  </div>
+</div>
+
+<div class="question">
+  <p><b>Q3.</b> Average of 10, 20, 30?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">
+    <p><b>Answer:</b> 20</p>
+    <p><b>Explanation:</b> (10+20+30)/3</p>
+  </div>
+</div>
+
+
+
+
+<div class="question">
+  <p><b>Q4.</b> A train travels 180 km in 3 hours. Speed?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">
+    <b>Answer:</b> 60 km/hr<br>
+    <b>Explanation:</b> Speed = Distance / Time = 180 / 3
+  </div>
+</div>
+
+<div class="question">
+  <p><b>Q5.</b> 25% of 400?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">100 (25/100 × 400)</div>
+</div>
+
+
+<div class="question">
+  <p><b>Q6.</b> Average of 5, 10, 15?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">10</div>
+</div>
+
+<div class="question">
+  <p><b>Q7.</b> Simple Interest on ₹2000 at 5% for 2 years?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">₹200</div>
+</div>
+
+<div class="question">
+  <p><b>Q8.</b> LCM of 6 and 9?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">18</div>
+</div>
+
+<div class="question">
+  <p><b>Q9.</b> HCF of 24 and 36?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">12</div>
+</div>
+
+<div class="question">
+  <p><b>Q10.</b> 40% of 150?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">60</div>
+</div>
+
+<div class="question">
+  <p><b>Q11.</b> If CP = 500, SP = 650. Profit?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">₹150</div>
+</div>
+
+<div class="question">
+  <p><b>Q12.</b> Time taken to travel 120 km at 40 km/hr?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">3 hours</div>
+</div>
+
+<div class="question">
+  <p><b>Q13.</b> Ratio of 2:3, sum = 25. Bigger number?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">15</div>
+</div>
+
+<div class="question">
+  <p><b>Q14.</b> 15²?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">225</div>
+</div>
+
+<div class="question">
+  <p><b>Q15.</b> √196?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">14</div>
+</div>
+
+<div class="question">
+  <p><b>Q16.</b> 1 km = ? meters</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">1000 m</div>
+</div>
+
+<div class="question">
+  <p><b>Q17.</b> 3³ + 2² = ?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">31</div>
+</div>
+
+<div class="question">
+  <p><b>Q18.</b> 20% increase of 200?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">240</div>
+</div>
+
+<div class="question">
+  <p><b>Q19.</b> A car travels 150 km in 3 hours. Find its speed.</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">
+    <b>Answer:</b> 50 km/hr<br>
+    <b>Explanation:</b> Speed = Distance / Time = 150 / 3
+  </div>
+</div>
+
+<div class="question">
+  <p><b>Q20.</b> 30% of 600 is?</p>
+  <button onclick="showAns(this)">Show Answer</button>
+  <div class="answer">180 (30/100 × 600)</div>
+</div>
+</div>
+
+
+<!-- ================= TEST MODE ================= -->
+<div id="test" style="display:none;">
+
+<h2>Mock Test (MCQ + Timer)</h2>
+<h3 id="timer">Time Left: 60s</h3>
+
+<p><b>1.</b> 10% of 300?</p>
+<input type="radio" name="q1" value="0"> 20<br>
+<input type="radio" name="q1" value="1"> 30<br>
+<input type="radio" name="q1" value="0"> 40<br>
+
+<p><b>2.</b> Speed = Distance / ?</p>
+<input type="radio" name="q2" value="1"> Time<br>
+<input type="radio" name="q2" value="0"> Work<br>
+<input type="radio" name="q2" value="0"> Speed<br>
+
+<p><b>3.</b> Average of 2,4,6?</p>
+<input type="radio" name="q3" value="0"> 3<br>
+<input type="radio" name="q3" value="1"> 4<br>
+<input type="radio" name="q3" value="0"> 6<br>
+
+
+
+
+
+
+
+<p><b>4.</b> 10% of 500?</p>
+<input type="radio" name="q1" value="1"> 50<br>
+<input type="radio" name="q1" value="0"> 100<br>
+<input type="radio" name="q1" value="0"> 25<br>
+
+<p><b>5.</b> Speed = Distance / ?</p>
+<input type="radio" name="q2" value="1"> Time<br>
+<input type="radio" name="q2" value="0"> Work<br>
+<input type="radio" name="q2" value="0"> Speed<br>
+
+<p><b>6.</b> LCM of 4 and 10?</p>
+<input type="radio" name="q3" value="0"> 10<br>
+<input type="radio" name="q3" value="1"> 20<br>
+<input type="radio" name="q3" value="0"> 40<br>
+
+<p><b>7.</b> √144?</p>
+<input type="radio" name="q4" value="0"> 10<br>
+<input type="radio" name="q4" value="1"> 12<br>
+<input type="radio" name="q4" value="0"> 14<br>
+
+<p><b>8.</b> Average of 3, 6, 9?</p>
+<input type="radio" name="q5" value="1"> 6<br>
+<input type="radio" name="q5" value="0"> 9<br>
+<input type="radio" name="q5" value="0"> 3<br>
+
+<p><b>9.</b> 25% of 200?</p>
+<input type="radio" name="q6" value="1"> 50<br>
+<input type="radio" name="q6" value="0"> 25<br>
+<input type="radio" name="q6" value="0"> 100<br>
+
+<p><b>10.</b> Time = Distance / ?</p>
+<input type="radio" name="q7" value="1"> Speed<br>
+<input type="radio" name="q7" value="0"> Work<br>
+<input type="radio" name="q7" value="0"> Power<br>
+
+<p><b>11.</b> 7²?</p>
+<input type="radio" name="q8" value="1"> 49<br>
+<input type="radio" name="q8" value="0"> 14<br>
+<input type="radio" name="q8" value="0"> 21<br>
+
+<p><b>12.</b> Profit = ?</p>
+<input type="radio" name="q9" value="1"> SP − CP<br>
+<input type="radio" name="q9" value="0"> CP − SP<br>
+<input type="radio" name="q9" value="0"> SP + CP<br>
+
+<p><b>13.</b> HCF of 12 and 18?</p>
+<input type="radio" name="q10" value="1"> 6<br>
+<input type="radio" name="q10" value="0"> 12<br>
+<input type="radio" name="q10" value="0"> 18<br>
+
+<p><b>14.</b> 20% of 450 is?</p>
+<input type="radio" name="q1" value="0"> 60<br>
+<input type="radio" name="q1" value="1"> 90<br>
+<input type="radio" name="q1" value="0"> 120<br>
+
+<p><b>15.</b>.</b> Speed = Distance / ?</p>
+<input type="radio" name="q2" value="1"> Time<br>
+<input type="radio" name="q2" value="0"> Work<br>
+<input type="radio" name="q2" value="0"> Power<br>
+
+<p><b>16.</b> Average of 12, 18 and 24?</p>
+<input type="radio" name="q3" value="0"> 16<br>
+<input type="radio" name="q3" value="1"> 18<br>
+<input type="radio" name="q3" value="0"> 20<br>
+
+<p><b>17.</b> Simple Interest of ₹1000 at 10% for 2 years?</p>
+<input type="radio" name="q4" value="1"> ₹200<br>
+<input type="radio" name="q4" value="0"> ₹100<br>
+<input type="radio" name="q4" value="0"> ₹300<br>
+
+<p><b>18.</b> If CP = 400 and SP = 520, find profit.</p>
+<input type="radio" name="q7" value="0"> ₹100<br>
+<input type="radio" name="q7" value="1"> ₹120<br>
+<input type="radio" name="q7" value="0"> ₹140<br>
+
+<p><b>19.</b> Ratio of 3:5, sum = 40. Bigger number?</p>
+<input type="radio" name="q10" value="1"> 25<br>
+<input type="radio" name="q10" value="0"> 15<br>
+<input type="radio" name="q10" value="0"> 20<br>
+
+<p><b>20.</b> HCF of 18 and 30?</p>
+<input type="radio" name="q6" value="1"> 6<br>
+<input type="radio" name="q6" value="0"> 12<br>
+<input type="radio" name="q6" value="0"> 9<br>
+
+
+<br>
+<button onclick="submitTest()">Submit Test</button>
+<h2 id="result"></h2>
+
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
+<script>
+/* Mode switch */
+function showPractice(){
+  document.getElementById("practice").style.display="block";
+  document.getElementById("test").style.display="none";
+  clearInterval(timerInt);
+}
+function showTest(){
+  document.getElementById("practice").style.display="none";
+  document.getElementById("test").style.display="block";
+  startTimer();
+}
+
+/* Practice answers */
+function showAns(btn){
+  btn.nextElementSibling.style.display="block";
+  btn.style.display="none";
+}
+
+/* Test timer & score */
+let time=60, timerInt;
+function startTimer(){
+  time=60;
+  document.getElementById("timer").innerText="Time Left: 60s";
+  timerInt=setInterval(()=>{
+    time--;
+    document.getElementById("timer").innerText="Time Left: "+time+"s";
+    if(time<=0){ clearInterval(timerInt); submitTest(); }
+  },1000);
+}
+
+function submitTest(){
+  clearInterval(timerInt);
+  let score=0;
+  document.querySelectorAll("input:checked").forEach(i=>{
+    score+=Number(i.value);
+  });
+  document.getElementById("result").innerText="Your Score: "+score+"/3";
+}
+</script>
+
+<!-- ================= EXTRA STYLE ================= -->
+<style>
+.question{background:#f5f6ff;padding:15px;border-radius:10px;margin:15px 0}
+.answer{display:none;color:green;margin-top:8px}
+button{margin:5px}
+</style>
+
+</body>
+</html>

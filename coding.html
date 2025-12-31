@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Coding Practice (Easy → Hard)</h1>
+
+<!-- LANGUAGE SELECT -->
+<div style="text-align:center;margin-bottom:20px;">
+  <label><b>Select Language:</b></label>
+  <select id="lang">
+    <option value="py">Python</option>
+    <option value="c">C</option>
+    <option value="java">Java</option>
+    <option value="js">JavaScript</option>
+  </select>
+</div>
+
+<!-- ================= EASY LEVEL ================= -->
+<h2>🟢 Easy Level</h2>
+
+<div class="question">
+<p><b>Q1.</b> Print Hello World</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">print("Hello World")</pre>
+
+<pre class="answer c">
+#include<stdio.h>
+int main(){
+ printf("Hello World");
+ return 0;
+}
+</pre>
+
+<pre class="answer java">
+class Main{
+ public static void main(String[] args){
+  System.out.println("Hello World");
+ }
+}
+</pre>
+
+<pre class="answer js">console.log("Hello World");</pre>
+</div>
+
+
+
+<div class="question">
+<p><b>Q2.</b> Check Even or Odd</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">
+n=10
+print("Even" if n%2==0 else "Odd")
+</pre>
+
+<pre class="answer c">
+int n=10;
+if(n%2==0) printf("Even");
+else printf("Odd");
+</pre>
+
+<pre class="answer java">
+int n=10;
+System.out.println(n%2==0?"Even":"Odd");
+</pre>
+
+<pre class="answer js">
+let n=10;
+console.log(n%2==0?"Even":"Odd");
+</pre>
+</div>
+
+<div class="question">
+<p><b>Q3.</b> Sum of first N natural numbers</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">n=5
+print(n*(n+1)//2)</pre>
+
+<pre class="answer c">int n=5;
+printf("%d",n*(n+1)/2);</pre>
+
+<pre class="answer java">int n=5;
+System.out.println(n*(n+1)/2);</pre>
+
+<pre class="answer js">let n=5;
+console.log(n*(n+1)/2);</pre>
+</div>
+
+<div class="question">
+<p><b>Q4.</b> Count characters in a string</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">s="hello"
+print(len(s))</pre>
+
+<pre class="answer c">char s[]="hello";
+printf("%d",strlen(s));</pre>
+
+<pre class="answer java">String s="hello";
+System.out.println(s.length());</pre>
+
+<pre class="answer js">let s="hello";
+console.log(s.length);</pre>
+</div>
+
+<div class="question">
+<p><b>Q5.</b> Swap two numbers</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">a,b=3,5
+a,b=b,a
+print(a,b)</pre>
+
+<pre class="answer c">int a=3,b=5,t;
+t=a;a=b;b=t;</pre>
+
+<pre class="answer java">int a=3,b=5;
+int t=a;a=b;b=t;</pre>
+
+<pre class="answer js">let a=3,b=5;
+[a,b]=[b,a];</pre>
+</div>
+
+<!-- ================= MEDIUM LEVEL ================= -->
+<h2>🟡 Medium Level</h2>
+
+<div class="question">
+<p><b>Q1.</b> Selection Sort</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">a=[64,25,12]
+for i in range(len(a)):
+ m=i
+ for j in range(i+1,len(a)):
+  if a[j]<a[m]: m=j
+ a[i],a[m]=a[m],a[i]
+print(a)</pre>
+
+<pre class="answer c">int a[]={64,25,12};
+for(int i=0;i<3;i++){
+ int m=i;
+ for(int j=i+1;j<3;j++)
+  if(a[j]<a[m]) m=j;
+ int t=a[i];a[i]=a[m];a[m]=t;
+}</pre>
+
+<pre class="answer java">int[] a={64,25,12};
+for(int i=0;i<a.length;i++){
+ int m=i;
+ for(int j=i+1;j<a.length;j++)
+  if(a[j]<a[m]) m=j;
+ int t=a[i];a[i]=a[m];a[m]=t;
+}</pre>
+
+<pre class="answer js">let a=[64,25,12];
+for(let i=0;i<a.length;i++){
+ let m=i;
+ for(let j=i+1;j<a.length;j++)
+  if(a[j]<a[m]) m=j;
+ [a[i],a[m]]=[a[m],a[i]];
+}
+console.log(a);</pre>
+</div>
+
+<div class="question">
+<p><b>Q2.</b> Frequency of elements</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">a=[1,2,2,3]
+from collections import Counter
+print(Counter(a))</pre>
+
+<pre class="answer c">// use loops & count manually</pre>
+
+<pre class="answer java">Map<Integer,Integer> m=new HashMap<>();
+for(int x:a) m.put(x,m.getOrDefault(x,0)+1);
+System.out.println(m);</pre>
+
+<pre class="answer js">let a=[1,2,2,3];
+let f={};
+a.forEach(x=>f[x]=(f[x]||0)+1);
+console.log(f);</pre>
+</div>
+
+<div class="question">
+<p><b>Q3.</b> Linear Search</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">
+arr=[10,20,30]
+x=20
+for i in range(len(arr)):
+ if arr[i]==x:
+  print(i)
+</pre>
+
+<pre class="answer c">
+int a[]={10,20,30},i;
+for(i=0;i<3;i++)
+ if(a[i]==20) printf("%d",i);
+</pre>
+
+<pre class="answer java">
+int[] a={10,20,30};
+for(int i=0;i<a.length;i++)
+ if(a[i]==20) System.out.println(i);
+</pre>
+
+<pre class="answer js">
+let a=[10,20,30];
+console.log(a.indexOf(20));
+</pre>
+</div>
+
+<div class="question">
+<p><b>Q4.</b> Perform Linear Search</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">arr=[10,20,30,40]
+key=30
+for i in range(len(arr)):
+ if arr[i]==key:
+  print(i)</pre>
+
+<pre class="answer c">int a[]={10,20,30,40};
+for(int i=0;i<4;i++)
+ if(a[i]==30) printf("%d",i);</pre>
+
+<pre class="answer java">int[] a={10,20,30,40};
+for(int i=0;i<a.length;i++)
+ if(a[i]==30) System.out.println(i);</pre>
+
+<pre class="answer js">let a=[10,20,30,40];
+console.log(a.indexOf(30));</pre>
+</div>
+
+<div class="question">
+<p><b>Q5.</b> Binary Search</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">a=[1,3,5,7,9]
+x=7
+l,h=0,len(a)-1
+while l<=h:
+ m=(l+h)//2
+ if a[m]==x: break
+ elif a[m]<x: l=m+1
+ else: h=m-1</pre>
+
+<pre class="answer c">// sorted array binary search logic</pre>
+
+<pre class="answer java">// binary search using loop</pre>
+
+<pre class="answer js">let a=[1,3,5,7,9];
+let x=7;
+let l=0,h=a.length-1;
+while(l<=h){
+ let m=Math.floor((l+h)/2);
+ if(a[m]==x) break;
+ else if(a[m]<x) l=m+1;
+ else h=m-1;
+}</pre>
+</div>
+
+<!-- ================= HARD LEVEL ================= -->
+<h2>🔴 Hard Level</h2>
+<div class="question">
+<p><b>Q1.</b> Longest Common Prefix</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<div class="answer py">
+s=["flower","flow","flight"]
+p=s[0]
+for w in s[1:]:
+ while not w.startswith(p):
+  p=p[:-1]
+print(p)
+</div>
+
+<div class="answer c">
+// compare character by character
+</div>
+
+<div class="answer java">
+// prefix comparison logic
+</div>
+
+<div class="answer js">
+let a=["flower","flow","flight"];
+let p=a[0];
+for(let w of a.slice(1))
+ while(!w.startsWith(p)) p=p.slice(0,-1);
+console.log(p);
+</div>
+</div>
+
+
+<div class="question">
+<p><b>Q2.</b> Two Sum</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<div class="answer py">
+nums=[2,7,11,15]
+t=9
+d={}
+for i,n in enumerate(nums):
+ if t-n in d:
+  print(d[t-n],i)
+ d[n]=i
+</div>
+
+<div class="answer c">
+// use hash map logic
+</div>
+
+<div class="answer java">
+// HashMap approach
+</div>
+
+<div class="answer js">
+let a=[2,7,11,15],t=9,m={};
+for(let i=0;i<a.length;i++){
+ if(m[t-a[i]]!=undefined) console.log(m[t-a[i]],i);
+ m[a[i]]=i;
+}
+</div>
+</div>
+
+<div class="question">
+<p><b>Q3.</b> Rotate Matrix 90°</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<div class="answer py">
+m=[[1,2],[3,4]]
+print(list(zip(*m[::-1])))
+</div>
+
+<div class="answer c">
+// reverse rows then transpose
+</div>
+
+<div class="answer java">
+// transpose + reverse rows
+</div>
+
+<div class="answer js">
+let m=[[1,2],[3,4]];
+let r=m.reverse();
+console.log(r[0].map((_,i)=>r.map(x=>x[i])));
+</div>
+</div>
+
+<div class="question">
+<p><b>Q4.</b> Matrix Transpose</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<div class="answer py">
+M=[[1,2,3],[4,5,6]]
+print(list(zip(*M)))
+</div>
+
+<div class="answer c">
+int a[2][3]={{1,2,3},{4,5,6}},t[3][2];
+for(int i=0;i<2;i++)
+ for(int j=0;j<3;j++)
+  t[j][i]=a[i][j];
+</div>
+
+<div class="answer java">
+int[][] a={{1,2,3},{4,5,6}};
+for(int i=0;i<3;i++)
+ for(int j=0;j<2;j++)
+  System.out.print(a[j][i]+" ");
+</div>
+
+<div class="answer js">
+let M=[[1,2,3],[4,5,6]];
+let T=M[0].map((_,i)=>M.map(r=>r[i]));
+console.log(T);
+</div>
+</div>
+
+
+<div class="question">
+<p><b>Q5.</b> Matrix Addition</p>
+<button onclick="showCode(this)">Show Code</button>
+
+<pre class="answer py">
+A=[[1,2],[3,4]]
+B=[[5,6],[7,8]]
+C=[[A[i][j]+B[i][j] for j in range(2)] for i in range(2)]
+print(C)
+</pre>
+
+<pre class="answer c">
+int A[2][2]={{1,2},{3,4}},B[2][2]={{5,6},{7,8}},C[2][2];
+for(int i=0;i<2;i++)
+ for(int j=0;j<2;j++)
+  C[i][j]=A[i][j]+B[i][j];
+</pre>
+
+<pre class="answer java">
+int[][] A={{1,2},{3,4}},B={{5,6},{7,8}},C=new int[2][2];
+for(int i=0;i<2;i++)
+ for(int j=0;j<2;j++)
+  C[i][j]=A[i][j]+B[i][j];
+</pre>
+
+<pre class="answer js">
+let A=[[1,2],[3,4]],B=[[5,6],[7,8]];
+let C=A.map((r,i)=>r.map((v,j)=>v+B[i][j]));
+console.log(C);
+</pre>
+</div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function showCode(btn){
+  let lang = document.getElementById("lang").value;
+  let answers = btn.parentElement.querySelectorAll(".answer");
+  answers.forEach(a => a.style.display="none");
+  btn.parentElement.querySelector("." + lang).style.display="block";
+}
+</script>
+
+<style>
+.question{background:#f5f6ff;padding:15px;border-radius:10px;margin:15px 0}
+.answer{display:none;background:#1e1e2f;color:#00ffcc;padding:10px;border-radius:8px}
+select{padding:6px;border-radius:6px}
+</style>
+
+</body>
+</html>
